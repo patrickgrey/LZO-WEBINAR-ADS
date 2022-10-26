@@ -1,0 +1,26 @@
+html,
+body {
+  overflow: hidden;
+}
+
+.wb-slides-01-container {
+  position: relative;
+}
+
+#wbSlide1,
+#wbSlide2 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+#wbSlide1 {
+  background-color: var(--ians-colour-light-blue);
+  left: 0;
+}
+
+#wbSlide2 {
+  background-color: var(--ians-colour-dark-blue);
+  left: 100%;
+}
