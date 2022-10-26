@@ -1,3 +1,7 @@
+:root {
+  --wb-left-margin: 4.6%;
+}
+
 html,
 body {
   overflow: hidden;
@@ -5,6 +9,30 @@ body {
 
 .wb-slides-01-container {
   position: relative;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  position: absolute;
+  top: var(--wb-left-margin);
+  left: 5.1%;
+  z-index: 1000;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--ians-colour-light-blue);
+  padding: 8px;
+  font-size: var(--step-5);
+  line-height: 0.72;
+  letter-spacing: 2px;
+}
+
+.wb-logo {
+  position: absolute;
+  top: 0;
+  left: 84.4%;
+  z-index: 1000;
+  width: 10.4%;
 }
 
 #wbSlide1,
@@ -17,10 +45,21 @@ body {
 }
 
 #wbSlide1 {
-  /* background-color: var(--ians-colour-light-blue); */
+  background-color: var(--ians-colour-light-grey);
   left: 0;
 }
 
 #wbSlide2 {
   left: 100%;
+}
+
+#wbSlide1 a.wb-link {
+  width: 100%;
+  font-size: var(--step-2);
+  text-align: center;
+  color: white;
+  background-color: var(--ians-colour-light-blue);
+  position: absolute;
+  bottom: 0;
+  font-weight: 500;
 }
