@@ -71,19 +71,29 @@ h1 {
   font-weight: 500;
 }
 
-#wbSlide1 #wbWebinarList {
+#wbSlide1 .wb-webinar-list-container {
+  width: 100%;
   position: absolute;
-  top: 27.4%;
+  top: 23%;
+  height: 68%;
   left: var(--wb-left-margin);
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+  justify-content: center;
+}
+
+#wbSlide1 #wbWebinarList {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
   max-width: none;
   width: calc(
     (100% - var(--wb-left-margin)) -
       (100% - var(--wb-logo-left) - var(--wb-logo-width))
   );
+  height: fit-content;
 }
 
 #wbSlide1 #wbWebinarList li {
@@ -98,18 +108,26 @@ h1 {
 }
 
 #wbSlide1 #wbWebinarList li h2 {
+  width: 100%;
   padding: 0;
   margin: 0;
-
   line-height: 1.1;
   color: var(--ians-colour-dark-blue);
   font-size: var(--step-2);
+  word-break: keep-all;
+  overflow: hidden;
+  hyphens: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 #wbSlide1 #wbWebinarList li h3 {
   /* position: absolute;
   left: 0;
   bottom: 0; */
+  max-width: 70%;
   font-size: var(--step-0);
   line-height: 1;
   text-transform: uppercase;
@@ -118,6 +136,13 @@ h1 {
   font-weight: 700;
   margin-top: var(--step--2);
   color: var(--ians-colour-light-blue);
+  word-break: keep-all;
+  overflow: hidden;
+  hyphens: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 #wbSlide1 #wbWebinarList li time {
