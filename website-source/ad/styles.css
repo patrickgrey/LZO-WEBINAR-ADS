@@ -1,5 +1,7 @@
 :root {
-  --wb-left-margin: 4.6%;
+  --wb-left-margin: 5.1%;
+  --wb-logo-left: 84.4%;
+  --wb-logo-width: 10.4%;
 }
 
 html,
@@ -15,8 +17,8 @@ body {
 h1 {
   margin: 0;
   position: absolute;
-  top: var(--wb-left-margin);
-  left: 5.1%;
+  top: 4.6%;
+  left: var(--wb-left-margin);
   z-index: 1000;
   text-transform: uppercase;
   color: white;
@@ -30,9 +32,9 @@ h1 {
 .wb-logo {
   position: absolute;
   top: 0;
-  left: 84.4%;
+  left: var(--wb-logo-left);
   z-index: 1000;
-  width: 10.4%;
+  width: var(--wb-logo-width);
 }
 
 #wbSlide1,
@@ -53,6 +55,11 @@ h1 {
   left: 100%;
 }
 
+.wb-slide-container {
+  position: relative;
+  height: 100vh;
+}
+
 #wbSlide1 a.wb-link {
   width: 100%;
   font-size: var(--step-2);
@@ -62,4 +69,62 @@ h1 {
   position: absolute;
   bottom: 0;
   font-weight: 500;
+}
+
+#wbSlide1 #wbWebinarList {
+  position: absolute;
+  top: 27.4%;
+  left: var(--wb-left-margin);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  width: calc(
+    (100% - var(--wb-left-margin)) -
+      (100% - var(--wb-logo-left) - var(--wb-logo-width))
+  );
+}
+
+#wbSlide1 #wbWebinarList li {
+  position: relative;
+  max-width: none;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 0;
+  margin-bottom: 2%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.04),
+    0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04);
+}
+
+#wbSlide1 #wbWebinarList li h2 {
+  padding: 0;
+  margin: 0;
+
+  line-height: 1.1;
+  color: var(--ians-colour-dark-blue);
+  font-size: var(--step-2);
+}
+
+#wbSlide1 #wbWebinarList li h3 {
+  /* position: absolute;
+  left: 0;
+  bottom: 0; */
+  font-size: var(--step-0);
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  margin-top: var(--step--2);
+  color: var(--ians-colour-light-blue);
+}
+
+#wbSlide1 #wbWebinarList li time {
+  padding: 0 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  background-color: var(--ians-colour-light-blue);
 }
