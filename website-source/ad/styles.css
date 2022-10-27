@@ -79,7 +79,6 @@ h1 {
   left: var(--wb-left-margin);
   display: flex;
   flex-direction: column;
-  /* align-content: center; */
   justify-content: center;
 }
 
@@ -87,7 +86,6 @@ h1 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  /* width: 100%; */
   max-width: none;
   width: calc(
     (100% - var(--wb-left-margin)) -
@@ -124,9 +122,6 @@ h1 {
 }
 
 #wbSlide1 #wbWebinarList li h3 {
-  /* position: absolute;
-  left: 0;
-  bottom: 0; */
   max-width: 70%;
   font-size: var(--step-0);
   line-height: 1;
