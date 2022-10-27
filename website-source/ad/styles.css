@@ -2,6 +2,9 @@
   --wb-left-margin: 5.1%;
   --wb-logo-left: 84.4%;
   --wb-logo-width: 10.4%;
+  --wb-qr-width: 20.1%;
+  --wb-qr-height: 35.74%;
+  --wb-qr-bottom: 96%;
 }
 
 html,
@@ -9,7 +12,8 @@ body {
   overflow: hidden;
 }
 
-.wb-slides-01-container {
+.wb-slides-01-container,
+.wb-slides-02-container {
   position: relative;
   height: 100vh;
 }
@@ -52,7 +56,7 @@ h1 {
 }
 
 #wbSlide2 {
-  left: 100%;
+  left: 0;
 }
 
 .wb-slide-container {
@@ -105,7 +109,8 @@ h1 {
     0 4px 4px rgba(0, 0, 0, 0.04), 0 8px 8px rgba(0, 0, 0, 0.04);
 }
 
-#wbSlide1 #wbWebinarList li h2 {
+#wbSlide1 #wbWebinarList li h2,
+#wbSlide2 h2 {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -121,7 +126,8 @@ h1 {
   text-overflow: ellipsis;
 }
 
-#wbSlide1 #wbWebinarList li h3 {
+#wbSlide1 #wbWebinarList li h3,
+#wbSlide2 h3 {
   max-width: 70%;
   font-size: var(--step-0);
   line-height: 1;
@@ -135,16 +141,50 @@ h1 {
   overflow: hidden;
   hyphens: auto;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
 
-#wbSlide1 #wbWebinarList li time {
+#wbSlide1 #wbWebinarList li time,
+#wbSlide2 time {
   padding: 0 1rem;
   position: absolute;
   right: 0;
   bottom: 0;
   color: white;
   background-color: var(--ians-colour-light-blue);
+}
+
+.wb-slides-02-container {
+  background-image: url(images/webinars-bg.jpg);
+  object-fit: cover;
+}
+
+#wbSlide2 img.wb-qr-code {
+  position: absolute;
+  right: var(--wb-left-margin);
+  top: calc(var(--wb-qr-bottom) - var(--wb-qr-height));
+  width: var(--wb-qr-width);
+}
+
+.wb-name-date-container {
+  background-color: rgba(var(--ians-colour-light-blue-rgb), 0.5);
+  width: fit-content;
+  position: absolute;
+  left: var(--wb-left-margin);
+  top: calc(var(--wb-qr-bottom) - var(--wb-qr-height));
+  padding: 1rem;
+}
+
+.wb-name-date-container h3,
+.wb-name-date-container time {
+  position: relative !important;
+  background-color: transparent !important;
+  color: white !important;
+  max-width: 100% !important;
+  text-align: left !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: var(--step-3) !important;
 }
