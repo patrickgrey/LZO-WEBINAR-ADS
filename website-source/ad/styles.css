@@ -34,6 +34,15 @@ h1 {
   letter-spacing: 2px;
 }
 
+.wb-slides-01-container h1 {
+  background-color: transparent;
+  color: var(--ians-colour-dark-blue);
+}
+
+.wb-slides-01-container h1 > span {
+  color: var(--ians-colour-light-blue);
+}
+
 .wb-logo {
   position: absolute;
   top: 0;
@@ -52,7 +61,8 @@ h1 {
 }
 
 #wbSlide1 {
-  background-color: var(--ians-colour-light-grey);
+  /* background-color: var(--ians-colour-light-grey); */
+  background-color: white;
   left: 0;
 }
 
@@ -102,7 +112,7 @@ h1 {
 #wbSlide1 #wbWebinarList li {
   position: relative;
   max-width: none;
-  background-color: white;
+  background-color: var(--ians-colour-light-grey);
   padding: 10px 20px;
   margin: 0;
   margin-bottom: 2%;
