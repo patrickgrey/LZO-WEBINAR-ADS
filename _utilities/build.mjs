@@ -12,7 +12,7 @@ import { sassPlugin } from "esbuild-sass-plugin";
     bundle: true,
     entryPoints,
     external: ["*.jpg", "*.jpeg", "*.png", "*.svg", "*.webp", "*.avif", "*.gif"],
-    sourcemap: true,
+    sourcemap: false,
     minify: true,
     nodePaths: [`website-publish/shared`],
     outdir: `website-publish`,
