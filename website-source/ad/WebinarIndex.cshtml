@@ -1,0 +1,67 @@
+﻿@model List<TelevisionNews.Models.WebinarTV>
+
+@{
+  Layout = null;
+
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUROCONTROL Aviation Learning Centre Webinars</title>
+
+
+
+
+
+
+    <link rel="stylesheet" href="~/Content/styles.css">
+    <link rel="stylesheet" href="~/Content/styles.css.map">
+
+
+</head>
+<body>
+
+
+
+    <div class="wb-slides-01-container">
+        <h1>Upcoming <span>Webinars</span></h1>
+        <img class="wb-logo" src="~/Content/images/EUROCONTROL-logo-boxed-rgb.svg" alt="EUROCONTROL Logo">
+        <article id="wbSlide1" class="wb-slide">
+            <div class="wb-slide-container">
+                <div class="wb-webinar-list-container">
+                    <ul id="wbWebinarList">
+            @if (Model.Count > 0)
+            {
+              foreach (var webinar in Model)
+              {
+                string mainSpeaker = webinar.speaker.Substring(0, webinar.speaker.IndexOf(','));
+
+
+                      <li>
+                        <div>
+                          <img src="images/thumb-03.jpg" alt="Webinar thumbnail">
+                        </div>
+                        <div>
+                          <h2>@webinar.name</h2>
+                          <h3>@mainSpeaker</h3>
+                          <time datetime="@webinar.startdate">@webinar.startdate <span class="wbSlide1Time">@webinar.schedule</span></time>
+                        </div>
+                      </li>
+              }
+            }
+                    </ul>
+                </div>
+                <a class="wb-link" href="https://learningzone.eurocontrol.int/webinars.htm">learningzone.eurocontrol.int/webinars.htm</a>
+            </div>
+        </article>
+    </div>
+
+    <script type="module" defer src="~/Content/main.js"></script>
+
+
+</body>
+</html>
